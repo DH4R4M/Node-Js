@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enim</title>
+
+
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+    @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+    * {
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    :root {
+      --primary-color: #2f4054;
+      --accent-color: #ffd24c;
+      -webkit-user-drag: none;
+
+    }
+
+    :root * {
+      border-radius: 0;
+
+    }
+
+    h2 {
+      color: var(--primary-color);
+    }
+
+    .navbar,
+    .navbar .dropdown-menu,
+    .why-us .quote-bg,
+    footer {
+      background-color: var(--primary-color);
+    }
+
+    .navbar-brand {
+      color: #ffffff;
+      font-size: 1.5rem;
+    }
+
+    .navbar .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .hero {
+      background: url("https://codingyaar.com/wp-content/uploads/hero.jpg") center no-repeat;
+      background-size: cover;
+      height: 50vh;
+    }
+
+    .hero .hero-content {
+      width: 90%;
+    }
+
+    .why-us .quote-bg {
+      height: 30vw;
+    }
+
+    @media screen and (orientation: landscape) {
+      .hero {
+        height: 100vh;
+      }
+
+      .why-us .quote-bg {
+        height: 40vh;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .hero .hero-content {
+        width: 50%;
+      }
+
+      .navbar .navbar-nav .nav-link {
+        font-size: 1.2rem;
+        padding: 0.5rem 1.5rem;
+      }
+    }
+
+    .btn:not(.btn-outline-light) {
+      background-color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      padding: 0.7rem 1.2rem;
+    }
+
+    .why-us {
+      color: #050505;
+    }
+
+    .why-sub-section .img-fluid {
+      border: 0.5rem solid #ffffff;
+    }
+
+    @media screen and (min-width: 768px) {
+      .contact {
+        height: 70vh;
+      }
+    }
+
+    @media screen and (min-width: 992px) {
+      .container {
+        padding: 2rem 5rem;
+      }
+
+      .about h2 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-40%);
+        background-color: rgba(0, 0, 0, 0.4);
+        color: #ffffff;
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      .about {
+        text-align: center;
+      }
+
+      .about {
+        padding: 0 1.5rem;
+      }
+
+      .why-us {
+        padding: 2rem 1rem 0;
+        color: #000000;
+      }
+    }
+
+    .contact {
+      background: url("https://codingyaar.com/wp-content/uploads/contact.jpg") center no-repeat;
+    }
+
+
+
+
+    /* testimonial */
+
+
+    .testimonials {
+      background-color: var(--primary-color);
+      padding: 2rem;
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      /* align-items: center; */
+      justify-content: space-evenly;
+      border-bottom: 1px solid black;
+      border-top: 1px solid black;
+    }
+
+    /*  */
+    .snip1533 {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      color: #9e9e9e;
+      display: inline-block;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-size: 16px;
+      margin: 35px 10px 10px;
+      max-width: 310px;
+      min-width: 250px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 5px;
+      border-top: 5px solid #d2652d;
+    }
+
+    .snip1533 *,
+    .snip1533 *:before {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-transition: all 0.1s ease-out;
+      transition: all 0.1s ease-out;
+    }
+
+    .snip1533 figcaption {
+      padding: 13% 10% 12%;
+    }
+
+    .snip1533 figcaption:before {
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      background-color: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+      color: #d2652d;
+      content: "\f10e";
+      font-family: 'FontAwesome';
+      font-size: 32px;
+      font-style: normal;
+      left: 50%;
+      line-height: 60px;
+      position: absolute;
+      top: -30px;
+      width: 60px;
+    }
+
+    .snip1533 h3 {
+      color: #3c3c3c;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 24px;
+      margin: 10px 0 5px;
+    }
+
+    .snip1533 h4 {
+      font-weight: 400;
+      margin: 0;
+      opacity: 0.5;
+    }
+
+    .snip1533 blockquote {
+      font-style: italic;
+      font-weight: 300;
+      margin: 0 0 20px;
+    }
+  </style>
+
+
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top shadow" data-bs-theme="dark">
+    <div class="container-lg">
+      <a class="navbar-brand fw-bold" href="#">Enim</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="#products">Products</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+
+        </ul>
+        <a class="btn btn-outline-light" href="#contact-form">Contact Us</a>
+
+      </div>
+    </div>
+  </nav>
+  <div class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="hero-content position-relative">
+      <h1 class="text-light bg-dark p-3 pb-4" style="--bs-bg-opacity: .5;">Lorem ipsum dolor sit amet
+        consectetur
+        adipiscing elit</h1>
+      <button class="btn position-absolute top-100 start-50 translate-middle">View Products</button>
+    </div>
+  </div>
+  <div class="why-us text-center position-relative pt-5">
+    <div class="container">
+      <h2 class="fw-bold">Why Us?</h2>
+      <h5 class="text-uppercase text-secondary p-3"><span class="p-3">Lorem ipsum</span> | <span class="p-3">consectetur
+          adipiscing
+          | <span class="p-3">dolor
+            sit</span> </span>
+      </h5>
+      <div class="why-sub-section">
+        <div class="row g-4">
+          <div class="col-sm-4">
+            <img src="https://cdn-0.codingyaar.com/wp-content/uploads/why-1.jpg" class="img-fluid" alt="">
+            <h5 class="p-2">Lorem</h5>
+            <button class="btn">KNOW MORE</button>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://cdn-0.codingyaar.com/wp-content/uploads/why-2.jpg" class="img-fluid" alt="">
+            <h5 class="p-2">Ipsum</h5>
+            <button class="btn">KNOW MORE</button>
+          </div>
+          <div class="col-sm-4">
+            <img src="https://cdn-0.codingyaar.com/wp-content/uploads/why-3.jpg" class="img-fluid" alt="">
+            <h5 class="p-2">Consectetur</h5>
+            <button class="btn">KNOW MORE</button>
+          </div>
+        </div>
+      </div>
+      <div class="quote pt-3 text-center">
+        <p class="fs-5">"Maecenas sit amet nisi vel lacus feugiat gravida at at augue."</p class="fs-5">
+        <p class="text-uppercase">- Sed Vulputate</p>
+      </div>
+      <div class="quote-bg py-5 position-absolute bottom-0 start-0 end-0 z-n1 d-none d-lg-block">
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="about position-relative py-5" id="about">
+    <div class="container">
+      <h2 class="fw-bold py-3 px-4">About
+        Us?</h2>
+      <div class="row align-items-end">
+        <div class="col-xl-6 col-lg-7">
+          <img src="https://cdn-0.codingyaar.com/wp-content/uploads/about.jpg" class="img-fluid" alt="">
+        </div>
+        <div class="col-xl-6 col-lg-5">
+          <p class="py-2">Enim excepteur voluptate laboris magna et laborum dolore elit eiusmod
+            incididunt. Excepteur cupidatat qui veniam ut anim consequat in
+            officia et. Nisi occaecat ipsum nostrud esse consectetur deserunt esse veniam veniam ex dolore
+            irure
+            minim ipsum. </p>
+          <button class="btn">LEARN MORE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact hero d-flex align-items-center justify-content-center text-center" id="products">
+    <div class="hero-content position-relative">
+      <h1 class="text-light bg-dark p-3 pb-4" style="--bs-bg-opacity: .5;">Lorem ipsum dolor sit amet
+        consectetur
+        adipiscing elit</h1>
+      <button class="btn position-absolute top-100 start-50 translate-middle">View Products</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="testimonials" id="testimonials">
+
+
+
+
+    <figure class="snip1533">
+      <figcaption>
+        <blockquote>
+          <p>If you do the job badly enough, sometimes you don't get asked to do it again.</p>
+        </blockquote>
+        <h3>Wisteria Ravenclaw</h3>
+        <h4>Google Inc.</h4>
+      </figcaption>
+    </figure>
+    <figure class="snip1533">
+      <figcaption>
+        <blockquote>
+          <p>I'm killing time while I wait for life to shower me with meaning and happiness.</p>
+        </blockquote>
+        <h3>Ursula Gurnmeister</h3>
+        <h4>Facebook</h4>
+      </figcaption>
+    </figure>
+    <figure class="snip1533">
+      <figcaption>
+        <blockquote>
+          <p>The only skills I have the patience to learn are those that have no real application in life. </p>
+        </blockquote>
+        <h3>Ingredia Nutrisha</h3>
+        <h4>Twitter</h4>
+      </figcaption>
+    </figure>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <footer class="text-light pt-5">
+    <div class="container-lg">
+      <div class="row">
+        <div class="col-6 col-lg-4">
+          <h3 class="fw-bold">Enim</h3>
+          <p class="pt-2">321, Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p class="mb-2">0987654321</p>
+          <p>1234567890</p>
+        </div>
+        <div class="col">
+          <h4>Menu</h4>
+          <ul class="list-unstyled pt-2">
+            <li class="py-1">Home</li>
+            <li class="py-1">Shorts</li>
+            <li class="py-1">About</li>
+            <li class="py-1">Contact</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>More</h4>
+          <ul class="list-unstyled pt-2">
+            <li class="py-1">Landing Pages</li>
+            <li class="py-1">FAQs</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Categories</h4>
+          <ul class="list-unstyled pt-2">
+            <li class="py-1">Navbars</li>
+            <li class="py-1">Cards</li>
+            <li class="py-1">Buttons</li>
+            <li class="py-1">Carousels</li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3 text-lg-end">
+          <h4>Social Media Links</h4>
+          <div class="social-media pt-2">
+            <a href="#" class="text-light fs-2 me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-light fs-2 me-3"><i class="bi bi-pinterest"></i></a>
+            <a href="#" class="text-light fs-2 me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-light fs-2"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="d-sm-flex justify-content-between py-1">
+        <p>2023 © Dharamvir. All Rights Reserved. </p>
+        <p>
+          <a href="#" class="text-light text-decoration-none pe-4">Terms of use</a>
+          <a href="#" class="text-light text-decoration-none"> Privacy policy</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
